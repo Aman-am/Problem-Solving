@@ -7,7 +7,7 @@
 using namespace std;
 
 int findMinPathSum(vector<vector<int>>& grid, int r, int c) {
-    int i, j, count=0;
+    int i, j;
     // Total cost array
     int tc[r+1][c+1];
     tc[0][0] = grid[0][0];
@@ -21,8 +21,7 @@ int findMinPathSum(vector<vector<int>>& grid, int r, int c) {
 }
 
 int minPathSum(vector<vector<int>>& grid) {
-    int r= grid.size(), c=0;
-    if(r) c=grid[0].size();
+    int r= grid.size(), c=grid[0].size();
     return findMinPathSum(grid, r-1, c-1);
 }
 
