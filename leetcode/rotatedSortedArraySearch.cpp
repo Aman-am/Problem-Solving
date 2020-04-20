@@ -1,4 +1,4 @@
-// https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/529/week-2/3299/
+// https://leetcode.com/problems/search-in-rotated-sorted-array/
 
 #include <iostream>
 #include <bits/stdc++.h>
@@ -7,19 +7,30 @@
 using namespace std;
 
 int search(vector<int>& nums, int target) {
-    int begin = 0 , end =nums.size(), temp;
-    int mid = (begin+end)/2; 
-    
+    int begin = 0, end =nums.size()-1, mid;
     while(begin<=end){
-        if(nums[mid] == target)return mid;
-        if(target<nums[mid] && target > nums[begin]){
-            end = mid;
-        }else if(target<nums[mid] && target < nums[begin]){
-            begin = mid;
+        mid = (begin+end)/2; 
+        int midE = nums[mid], leftE = nums[begin], rightE = nums[end];
+        if(midE == target)return mid;
+        if(midE<leftE){
+            if(target<=rightE && target>midE){
+                begin = mid+1;
+            }
+            else
+                end = mid-1;
+        }
+        else if(midE>rightE){
+            if(target>=leftE && target<midE)
+                end = mid-1;
+            else
+                begin = mid+1;
+        }
+        else{
+            if(target>midE)begin=mid+1;
+            else end = mid-1;
         }
     }
     return -1;
-
 }
 
 int main(){
