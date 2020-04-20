@@ -1,6 +1,10 @@
 // https://leetcode.com/problems/diameter-of-binary-tree/
 
+#include <iostream>
 #include <bits/stdc++.h>
+#define fo(i, n) for(i=0; i<n; i++)
+
+using namespace std;
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
