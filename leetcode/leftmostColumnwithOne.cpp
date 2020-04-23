@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/minimum-path-sum/
+// https://leetcode.com/explore/featured/card/30-day-leetcoding-challenge/530/week-3/3306/
 
 #include <iostream>
 #include <bits/stdc++.h>
