@@ -30,8 +30,14 @@ int rangeBitwiseAnd(int m, int n) {
     return res;
 }
 
+int rangeBitwiseAndOptimised(int m, int n) {
+    while(n>m) n = n & n-1;
+
+    return n & m;
+}
 int main(){
     int m=5, n=7;
     cout<<rangeBitwiseAnd(m,n);
+    cout<<endl<<rangeBitwiseAndOptimised(m,n);
     return 0;
 }
