@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/move-zeroes/
+// https://leetcode.com/problems/bitwise-and-of-numbers-range/
 
 #include <iostream>
 #include <bits/stdc++.h>
