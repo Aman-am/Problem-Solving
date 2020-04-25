@@ -52,18 +52,18 @@ public:
         }   
     }
     int main(){
-    LRUCache cache(2);
+    LRUCache* cache = new LRUCache(2);
 
-    cache.put(2, 2);
-    cache.put(2, 2);
-    cache.put(1, 1);
-    cout<<cache.get(1);      
-    cache.put(3, 3);         
-    cout<<cache.get(2);      
-    cache.put(4, 4);         
-    cout<<cache.get(1);      
-    cout<<cache.get(3);      
-    cout<<cache.get(4);      
+    cache->put(2, 2);
+    cache->put(2, 2);
+    cache->put(1, 1);
+    cout<<cache->get(1);      
+    cache->put(3, 3);         
+    cout<<cache->get(2);      
+    cache->put(4, 4);         
+    cout<<cache->get(1);      
+    cout<<cache->get(3);      
+    cout<<cache->get(4);      
     return 0;
 }        
 
