@@ -1,4 +1,5 @@
-// https://leetcode.com/explore/challenge/card/30-day-leetcoding-challenge/528/week-1/3283/
+// https://leetcode.com/problems/single-element-in-a-sorted-array/
+//  O(log n) time and O(1) space
 
 #include <iostream>
 #include <bits/stdc++.h>
@@ -14,6 +15,7 @@ int singleNumber(vector<int>& nums) {
 }
 
 int main(){
-
+    vector <int> vec{1,1,2,2,3};
+    cout<< singleNumber(vec);
     return 0;
 }
